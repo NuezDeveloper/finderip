@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col 12">
+            <div class="col s6 m6" style="width: 50%;float:left;">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text" style="padding: 40px;">
+                        <h1>I know where you are</h1>
+                        <p>{{ country }}</p>
+                        <p>{{ ip }}</p>
+                        <p>{{ city }}</p>
+                        <p>{{ postal }}</p>
+                        <p>{{ region }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6 m6" style="width: 50%;float:left;">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <agm-map [latitude]="lat" [longitude]="lng">
+                            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                        </agm-map>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
